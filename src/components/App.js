@@ -6,7 +6,7 @@ class App extends Component {
     
     const numbers = [ 1, 2, 3, 4, 5 ]; 
    const relative=numbers.map((number) => 
-              <li key={"relativeListItem"+number.toString()}>{"relative"+number}</li>);
+              (<li key={"relativeListItem"+number.toString()}>{"relative"+number}</li>));
 
     render() {
 
