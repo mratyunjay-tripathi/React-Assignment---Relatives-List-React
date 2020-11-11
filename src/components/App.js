@@ -1,21 +1,23 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
-import Item from './Item';
+
 
 class App extends Component {
     
-    const numbers = [ 1, 2, 3, 4, 5 ]; 
-   const relative=numbers.map((number) => 
-              (<li key={"relativeListItem"+number.toString()}>{"relative"+number}</li>));
+    const relatives = ["chacha", "mama", "phupha", "bua"];
 
-    render() {
+   
 
         return(
             <div id="main">
-               <Item list={relative}/>
+               <ol key="relativeList">
+                {relatives.map((relative, indx) => (
+          <li key={"relativeListItem" + (indx + 1)}>{relative}</li>
+                 ))}
+                 </ol>
             </div>
-        )
-    }
+        );
+    
 }
 
 
